@@ -10,10 +10,12 @@ class Checkout
   
   def load_pricings(data)
     @pricings = []
-    data.split("\n").each do |line|
-      next if line.blank?
-      sku, quantity, price = *line.split(" ")
-      @pricings << Pricing.new(sku, quantity, price)
+    if data
+      data.split("\n").each do |line|
+        next if line.blank?
+        sku, quantity, price = *line.split(" ")
+        @pricings << Pricing.new(sku, quantity, price)
+      end
     end
   end
   
