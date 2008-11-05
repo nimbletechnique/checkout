@@ -1,9 +1,17 @@
+require 'rubygems'
+require 'active_support'
 require 'checkout'
 require 'spec'
 
 describe Checkout do
   
-  it "should do something" do
+  before :each do
+    @pricing_data = File.read(File.dirname(__FILE__) + "/pricings.txt")
+    @checkout = Checkout.new(@pricing_data)
+  end
+  
+  it "Should load valid pricing data" do
+    @checkout.should have(5).pricings
   end
   
 end
