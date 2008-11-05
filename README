@@ -1,0 +1,55 @@
+Write a checkout system for a grocery store. The system should handle special pricing such as 'oranges cost 65 cents, three oranges cost 1.25'
+
+The program should accept string input to populate the list of products that will serve as our inventory. Each line will include the sku, the quantity, and the price. Assume every product will have an entry with a quantity of 1. 'a 1 0.40' is a product with sku 'a'. One 'a' can be purchased for 40 cents.
+
+Our checkout accepts skus in any order. After all purchases are complete, it should provide a list of purchases and totals.
+
+Input for each purchase will be the skus.
+
+For instance:
+
+a 1 0.50
+a 3 1.20
+b 1 0.30
+c 1 5.00
+c 6 25.00
+
+a
+a
+b
+a
+
+c
+c
+a
+c
+a
+c
+b
+c
+c
+a
+b
+a
+b
+
+b
+c
+c
+
+OUTPUT:
+
+A 3 1.20
+B 1 0.30
+TOTAL 1.50
+
+A 4 1.70
+B 3 0.90
+C 6 25.00
+TOTAL 27.60
+
+C 2 10.00
+B 1 0.60
+TOTAL 10.60
+
+Do not use any external packages except unit testing frameworks. You do not need to provide any interface beyond what is necessary to prove that your code works. 
