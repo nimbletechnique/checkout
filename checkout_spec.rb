@@ -49,9 +49,9 @@ describe Checkout do
     
     it "should pass scenario #3" do
       @checkout.shop("b c c").should eql(squeeze(%{
+        B 1 0.30
         C 2 10.00
-        B 1 0.60
-        TOTAL 10.60        
+        TOTAL 10.30        
       }))
     end
     
